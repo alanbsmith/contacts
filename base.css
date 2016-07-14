@@ -1,0 +1,58 @@
+body {
+  padding: 40px 20px;
+  background-color: #273444;
+  font-family: "helvetica";
+}
+
+.header {
+  padding: 20px 10px 5px 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.header h2 {
+  color: #273444;
+  font-weight: 200;
+  margin: 0px;
+}
+
+.header span#add-contact {
+  padding: 4px 6px;
+  float: right;
+  font-size: 12px;
+  color: #8492A6;
+  border: solid 1px #8492A6;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.search-bar {
+  margin: auto;
+  padding: 10px 20px;
+  background-color: #C0CCDA;
+
+}
+
+.search-bar #search {
+  padding: 10px;
+  border: none;
+  width: 100%;
+  margin: 3px -10px;
+}
+
+.contact-list {
+  height: 400px;
+  overflow-y: scroll;
+  padding: 10px 0px;
+  background-color: #fff;
+}
+
+.contact-list .contact {
+  margin: 0px 10px;
+  border-bottom: solid 1px #C0CCDA;
+}
+
+.contact-list .contact p {
+  font-weight: 200;
+  color: #273444;
+}
