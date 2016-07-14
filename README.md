@@ -30,7 +30,7 @@ Currently the entries are static names. There's a lot of repetition in the UI an
 You may have noticed that this list is not sorted. It would be nice to have a way to alphabetize them by first or last name
 
 ##### 2. Search
-The list starts with only 17 contacts, so scrolling wasn't too painful. But when we add more it might become cumbersome. It would be nice to search through our contacts and find the one we want.
+The list starts with only 17 contacts, so scrolling isn't too painful. But when we add more it might become cumbersome. It would be nice to search through our contacts and find the one we want.
 
 ##### 3. Add New Contacts
 We're starting with a list of 17 names, which is great until we meet someone new. It would be nice if the small '+' button at the top gave us a way to add new contacts.
