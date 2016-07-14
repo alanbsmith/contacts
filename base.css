@@ -40,6 +40,26 @@ body {
   margin: 3px -10px;
 }
 
+.sort-select {
+  padding: 0px 10px;
+  background-color: #EFF2F7;
+}
+
+.sort-select p.sort-label {
+  display: inline-block;
+  color: #8492A6;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.sort-select a {
+  margin: 5px;
+  color: #273444;
+  font-size: 12px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
 .contact-list {
   height: 400px;
   overflow-y: scroll;

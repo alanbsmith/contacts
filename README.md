@@ -25,7 +25,6 @@ The purpose of these challenges is to force you to get everything you can out of
 ##### 1. Dynamic Entries
 Currently the entries are static names. There's a lot of repetition in the UI and would be difficult to update information later. It would be nice to have a dynamic list to populate our contacts.
 
-
 ##### 7. Sorting
 You may have noticed that this list is not sorted. It would be nice to have a way to alphabetize them by first or last name
 

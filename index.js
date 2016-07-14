@@ -1,16 +1,4 @@
-// var oldHello = function(name) {
-//   console.log('hello, ' + name + '!');
-// };
-//
-//
-// const hello = (name) => {
-//   console.log(`hello, ${name}!`);
-// };
-//
-// oldHello('world');
-// hello('es6');
-
-let contacts = [
+let contactList = [
   'Andy Mention',
   'Emily Davis',
   'Eric Fransen',
@@ -31,10 +19,10 @@ let contacts = [
 ];
 
 $(document).ready(() => {
-  buildContactList();
+  buildContactList(contactList);
 });
 
-const buildContactList = () => {
+const buildContactList = (contacts) => {
   return contacts.map((contact, i) => {
     $('.contact-list').append(
       '<div class="contact">' +
@@ -45,3 +33,20 @@ const buildContactList = () => {
     )
   });
 };
+
+const sortByLastName = () => {
+  const sorted = contactList.sort((x,y) => {
+    first = x.split(' ').pop();
+    next = y.split(' ').pop();
+    return first < next ? -1 : first > next ? 1 : 0;
+  });
+  return buildContactList(sorted);
+};
+
+$('.sort-link').click((e) => {
+  $('.contact').remove();
+  if(e.target.id === "last-name") {
+    return sortByLastName();
+  }
+  return buildContactList(contactList.sort());
+});
