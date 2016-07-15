@@ -25,21 +25,20 @@ The purpose of these challenges is to force you to get everything you can out of
 ##### 1. Dynamic Entries
 Currently the entries are static names. There's a lot of repetition in the UI and would be difficult to update information later. It would be nice to have a dynamic list to populate our contacts.
 
-
-##### 7. Sorting
+##### 2. Sorting
 You may have noticed that this list is not sorted. It would be nice to have a way to alphabetize them by first or last name
 
-##### 2. Search
-The list starts with only 17 contacts, so scrolling wasn't too painful. But when we add more it might become cumbersome. It would be nice to search through our contacts and find the one we want.
+##### 3. Search
+The list starts with only 17 contacts, so scrolling isn't too painful. But when we add more it might become cumbersome. It would be nice to search through our contacts and find the one we want.
 
-##### 3. Add New Contacts
+##### 4. Add New Contacts
 We're starting with a list of 17 names, which is great until we meet someone new. It would be nice if the small '+' button at the top gave us a way to add new contacts.
 
-##### 4. Viewing More Info
+##### 5. Viewing More Info
 Names are nice, but not super helpful for contacting people. It would be cool if there was a way we could click on a name and see more info for the contact. How you want to implement that is totally up to you.
 
-##### 5. Editing
+##### 6. Editing
 Sometimes people move or get new phone numbers. It would be nice to update our information.
 
-##### 6. Removing
+##### 7. Removing
 Removing contacts is the last of the CRUD operations we need to tackle. Find a way to remove contacts from your list.
