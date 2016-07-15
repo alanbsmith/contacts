@@ -19,6 +19,7 @@ let contactList = [
 ];
 
 $(document).ready(() => {
+  clearSearchInput();
   buildContactList(contactList);
 });
 
@@ -44,9 +45,25 @@ const sortByLastName = () => {
 };
 
 $('.sort-link').click((e) => {
-  $('.contact').remove();
+  clearContactList()
   if(e.target.id === "last-name") {
     return sortByLastName();
   }
   return buildContactList(contactList.sort());
 });
+
+$('input#search').keyup((e) => {
+  const results = contactList.filter((contact) => {
+    return contact.toLowerCase().includes(e.target.value)
+  });
+  clearContactList();
+  return buildContactList(results);
+});
+
+const clearContactList = () => {
+  $('.contact').remove();
+};
+
+const clearSearchInput = () => {
+  $('input#search').value = '';
+}
