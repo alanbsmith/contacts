@@ -15,7 +15,7 @@ $(document).ready(function(){
   listContacts()
 })
 
-var contacts = [
+const contacts = [
   "Andy Mention",
   "Emily Davis",
   "Eric Fransen",
