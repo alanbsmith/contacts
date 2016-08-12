@@ -43,7 +43,8 @@ var contacts = [
 function listContacts() {
   contacts.forEach(function(contact) {
     $(".contact-list").append(
-      "<div class='contact'><p class='name'> " + contact + "</p></div>"
+      "<div class='contact'><p class='name'> " + contact + "</p>" +
+      "<div class='info hidden'><p>Email: </p><p>Phone:</p><p>Address:</p></div></div>"
     )
   })
 }
@@ -98,19 +99,15 @@ function create() {
     var newContact = $("#name-field").val()
     contacts.unshift(newContact)
     $(".contact-list").prepend(
-      "<div class='contact'><p class='name'> " + newContact + "</p></div>"
+      "<div class='contact'><p class='name'> " + newContact + "</p>" +
+      "<div class='info hidden'><p>Email: </p><p>Phone:</p><p>Address:</p></div></div>"
     )
     $(".new-contact").fadeOut()
   })
 }
 
 function moreInfo() {
-  $(".name").on("click", function() {
-    $(this).toggleClass("display")
-    if ($(this).hasClass("display")) {
-      $(this).append("<div class='info'><p>Email: </p><p>Phone:</p><p>Address:</p></div>")
-    } else {
-      $(this).children("div").fadeOut()
-    }
+  $(".contact-list").on("click", ".name", function() {
+    $(this).parent("div").children("div").toggleClass("hidden")
   })
 }
