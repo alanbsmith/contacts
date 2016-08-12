@@ -17,6 +17,7 @@ $(document).ready(function(){
   search()
   addContact()
   create()
+  moreInfo()
 })
 
 var contacts = [
@@ -100,5 +101,16 @@ function create() {
       "<div class='contact'><p class='name'> " + newContact + "</p></div>"
     )
     $(".new-contact").fadeOut()
+  })
+}
+
+function moreInfo() {
+  $(".name").on("click", function() {
+    $(this).toggleClass("display")
+    if ($(this).hasClass("display")) {
+      $(this).append("<div class='info'><p>Email: </p><p>Phone:</p><p>Address:</p></div>")
+    } else {
+      $(this).children("div").fadeOut()
+    }
   })
 }
