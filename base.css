@@ -60,3 +60,11 @@ body {
 .sort {
   float: left;
 }
+
+.hidden {
+  display: none;
+}
+
+input {
+  margin: 8px;
+}
