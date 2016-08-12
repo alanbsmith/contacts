@@ -33,6 +33,7 @@ var contacts = [
 $(document).ready(function(){
   listContacts(contacts)
   sortByFirstName()
+  sortByLastName()
 })
 
 
@@ -45,8 +46,26 @@ function listContacts(contacts) {
 }
 
 function sortByFirstName() {
-  $(".sort").on("click", function() {
+  $("#sort-by-first").on("click", function() {
     $(".contact-list").children().remove()
     listContacts(contacts.sort())
   })
+}
+
+function sortByLastName() {
+  $("#sort-by-last").on("click", function() {
+    $(".contact-list").children().remove()
+    var sortedContacts = contacts.sort(sortByLast)
+    listContacts(sortedContacts)
+  })
+}
+
+function sortByLast(a, b) {
+  if (a.split(" ")[1] < b.split(" ")[1]) {
+    return -1;
+  }
+  if (a.split(" ")[1] > b.split(" ")[1]) {
+    return 1;
+  }
+  return 0
 }
