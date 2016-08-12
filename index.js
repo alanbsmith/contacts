@@ -55,8 +55,7 @@ function sortByFirstName() {
 function sortByLastName() {
   $("#sort-by-last").on("click", function() {
     $(".contact-list").children().remove()
-    var sortedContacts = contacts.sort(sortByLast)
-    listContacts(sortedContacts)
+    listContacts(contacts.sort(sortByLast))
   })
 }
 
