@@ -95,7 +95,7 @@ function addContact() {
 function create() {
   $("#add").on("click", function() {
     var newContact = $("#name-field").val()
-    contacts.push(newContact)
+    contacts.unshift(newContact)
     $(".contact-list").prepend(
       "<div class='contact'><p class='name'> " + newContact + "</p></div>"
     )
