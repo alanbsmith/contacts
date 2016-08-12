@@ -34,6 +34,7 @@ $(document).ready(function(){
   listContacts(contacts)
   sortByFirstName()
   sortByLastName()
+  search()
 })
 
 
@@ -67,4 +68,17 @@ function sortByLast(a, b) {
     return 1;
   }
   return 0
+}
+
+function search() {
+  $("#search").on("keyup", function(event) {
+    var text = $("#search").val().toLowerCase()
+    $(".name").each(function(index) {
+      if ($(this).text().toLowerCase().includes(text)) {
+        $(this).closest("div").show()
+      } else {
+        $(this).closest("div").hide()
+      }
+    })
+  })
 }
