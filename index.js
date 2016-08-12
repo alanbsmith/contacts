@@ -10,12 +10,7 @@ const hello = (name) => {
 oldHello('world');
 hello('es6');
 
-
-$(document).ready(function(){
-  listContacts()
-})
-
-const contacts = [
+var contacts = [
   "Andy Mention",
   "Emily Davis",
   "Eric Fransen",
@@ -35,10 +30,23 @@ const contacts = [
   "Will Faurot"
 ]
 
-function listContacts() {
+$(document).ready(function(){
+  listContacts(contacts)
+  sortByFirstName()
+})
+
+
+function listContacts(contacts) {
   contacts.forEach(function(contact) {
     $(".contact-list").append(
       "<div class='contact'><p class='name'> " + contact + "</p></div>"
     )
+  })
+}
+
+function sortByFirstName() {
+  $(".sort").on("click", function() {
+    $(".contact-list").children().remove()
+    listContacts(contacts.sort())
   })
 }

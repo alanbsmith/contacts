@@ -56,3 +56,7 @@ body {
   font-weight: 200;
   color: #273444;
 }
+
+.sort {
+  float: left;
+}
