@@ -18,6 +18,8 @@ $(document).ready(function(){
   addContact()
   create()
   moreInfo()
+  edit()
+  saveChanges()
 })
 
 var contacts = [
@@ -44,7 +46,8 @@ function listContacts() {
   contacts.forEach(function(contact) {
     $(".contact-list").append(
       "<div class='contact'><p class='name'> " + contact + "</p>" +
-      "<div class='info hidden'><p>Email: </p><p>Phone:</p><p>Address:</p></div></div>"
+      "<div class='info hidden'><p class='email'>Email: </p><p class='phone'>Phone:</p><p class='address'>Address:</p></div>"
+      + "<button class='edit'>Edit</button>" + "</div>"
     )
   })
 }
@@ -100,7 +103,9 @@ function create() {
     contacts.unshift(newContact)
     $(".contact-list").prepend(
       "<div class='contact'><p class='name'> " + newContact + "</p>" +
-      "<div class='info hidden'><p>Email: </p><p>Phone:</p><p>Address:</p></div></div>"
+      "<div class='info hidden'><p class='email'>Email: </p><p class='phone'>Phone:</p>" +
+      "<p class='address'>Address:</p></div>"
+      + "<button class='edit'>Edit</button>" + "</div>"
     )
     $(".new-contact").fadeOut()
   })
@@ -109,5 +114,30 @@ function create() {
 function moreInfo() {
   $(".contact-list").on("click", ".name", function() {
     $(this).parent("div").children("div").toggleClass("hidden")
+  })
+}
+
+function edit() {
+  $(".contact-list").on("click", ".edit", function() {
+    if ($(".edit-form").length === 0) {
+      $(this).parent("div").append("<div class='edit-form'>" +
+        "Name<input class='edit-name'></input>" +
+        "Email<input class='edit-email'></input>" +
+        "Phone<input class='edit-phone'></input>" +
+        "Address<input class='edit-address'></input>" +
+        "<button class='save' value='save'>Save</button>" + "</div>"
+      )
+    }
+  })
+}
+
+function saveChanges() {
+  $(".contact-list").on("click", ".save", function() {
+    $(this).closest(".contact").find(".name").text($(".edit-name").val())
+    $(this).closest(".contact").find(".email").text("Email: " + $(".edit-email").val())
+    $(this).closest(".contact").find(".phone").text("Phone: " + $(".edit-phone").val())
+    $(this).closest(".contact").find(".address").text("Address: " + $(".edit-address").val())
+    $(this).closest(".edit-form").remove()
+    $(".edit-form").remove()
   })
 }
