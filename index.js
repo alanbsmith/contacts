@@ -119,12 +119,16 @@ function moreInfo() {
 
 function edit() {
   $(".contact-list").on("click", ".edit", function() {
+    var name = $(this).closest(".contact").find(".name").text()
+    var email = $(this).closest(".contact").find(".email").text().replace("Email:", "")
+    var phone = $(this).closest(".contact").find(".phone").text().replace("Phone:", "")
+    var address = $(this).closest(".contact").find(".address").text().replace("Address:", "")
     if ($(".edit-form").length === 0) {
       $(this).parent("div").append("<div class='edit-form'>" +
-        "Name<input class='edit-name'></input>" +
-        "Email<input class='edit-email'></input>" +
-        "Phone<input class='edit-phone'></input>" +
-        "Address<input class='edit-address'></input>" +
+        "Name<input class='edit-name' value=" + name + "></input>" +
+        "Email<input class='edit-email' value=" + email + "></input>" +
+        "Phone<input class='edit-phone' value=" + phone + "></input>" +
+        "Address<input class='edit-address' value=" + address + "></input>" +
         "<button class='save' value='save'>Save</button>" + "</div>"
       )
     }
