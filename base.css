@@ -56,3 +56,20 @@ body {
   font-weight: 200;
   color: #273444;
 }
+
+.sort {
+  float: left;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  margin: 8px;
+}
+
+.edit {
+  padding: 5px;
+  margin-left: 5px;
+}
