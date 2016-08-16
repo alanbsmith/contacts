@@ -148,7 +148,7 @@ function saveChanges() {
 }
 
 function removeContact() {
-  $(".delete").on("click", function() {
+  $(".contact-list").on("click", ".delete", function() {
     $(this).parent("div").fadeOut()
   })
 }
