@@ -9,29 +9,20 @@
   </head>
   <body>
     <div class="header">
+      <button class = "sort" id="sort-by-first">Sort By First Name</button>
+      <button class = "sort" id="sort-by-last">Sort By Last Name</button>
       <h2>Contacts<span id="add-contact">+</span></h2>
     </div>
     <div class="search-bar">
       <input id="search" type="text" placeholder="&#128269; Search"></input>
     </div>
+
+    <div class="new-contact hidden">
+      <input id="name-field" type="text" name="name" value="" placeholder="Name"></input>
+      <input id="add" type="submit" name="name" value="Add Contact"></input>
+    </div>
+
     <div class="contact-list">
-      <div class="contact"><p class="name">Andy Mention</p></div>
-      <div class="contact"><p class="name">Emily Davis</p></div>
-      <div class="contact"><p class="name">Eric Fransen</p></div>
-      <div class="contact"><p class="name">Jessica Goulding</p></div>
-      <div class="contact"><p class="name">Jonmichael Chambers</p></div>
-      <div class="contact"><p class="name">Marc Garreau</p></div>
-      <div class="contact"><p class="name">Tan Doan</p></div>
-      <div class="contact"><p class="name">Alan Smith</p></div>
-      <div class="contact"><p class="name">Allison Larson</p></div>
-      <div class="contact"><p class="name">Andrew Watkins</p></div>
-      <div class="contact"><p class="name">Chad Brading</p></div>
-      <div class="contact"><p class="name">Corey Davis</p></div>
-      <div class="contact"><p class="name">Gustavo Villagrana</p></div>
-      <div class="contact"><p class="name">Hilary Denton</p></div>
-      <div class="contact"><p class="name">Horacio Chavez</p></div>
-      <div class="contact"><p class="name">Tim Proctor</p></div>
-      <div class="contact"><p class="name">Will Faurot</p></div>
     </div>
   </body>
   <script src="index.js"></script>
