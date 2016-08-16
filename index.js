@@ -20,6 +20,7 @@ $(document).ready(function(){
   moreInfo()
   edit()
   saveChanges()
+  removeContact()
 })
 
 var contacts = [
@@ -47,7 +48,7 @@ function listContacts() {
     $(".contact-list").append(
       "<div class='contact'><p class='name'> " + contact + "</p>" +
       "<div class='info hidden'><p class='email'>Email: </p><p class='phone'>Phone:</p><p class='address'>Address:</p></div>"
-      + "<button class='edit'>Edit</button>" + "</div>"
+      + "<button class='edit'>Edit</button>" + "<button class='delete'>Delete</button>" + "</div>"
     )
   })
 }
@@ -105,7 +106,7 @@ function create() {
       "<div class='contact'><p class='name'> " + newContact + "</p>" +
       "<div class='info hidden'><p class='email'>Email: </p><p class='phone'>Phone:</p>" +
       "<p class='address'>Address:</p></div>"
-      + "<button class='edit'>Edit</button>" + "</div>"
+      + "<button class='edit'>Edit</button>" + "<button class='delete'>Delete</button>" + "</div>"
     )
     $(".new-contact").fadeOut()
   })
@@ -143,5 +144,11 @@ function saveChanges() {
     $(this).closest(".contact").find(".address").text("Address: " + $(".edit-address").val())
     $(this).closest(".edit-form").remove()
     $(".edit-form").remove()
+  })
+}
+
+function removeContact() {
+  $(".delete").on("click", function() {
+    $(this).parent("div").fadeOut()
   })
 }

@@ -69,7 +69,7 @@ input {
   margin: 8px;
 }
 
-.edit {
+.edit, .delete {
   padding: 5px;
   margin-left: 5px;
 }
